@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    gap: 100px;
+}
+
+.textContainer{
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text1);
+}
+
+.title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text1);
+}
+
+.description{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text1);
+}
+
+
+
+.imgContainer{
+    flex: 1;
+    position: relative;
+    width: 550px;
+    height: 350px;
+}

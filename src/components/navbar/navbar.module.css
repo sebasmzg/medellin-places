@@ -1,11 +1,13 @@
+/* This class represents the container element for the navbar */
 .container {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 100px; /* Set the height of the container to 100 pixels */
+    display: flex; /* Use flexbox to arrange the items inside the container */
+    justify-content: space-between; /* Space the items evenly along the horizontal axis */
+    align-items: center; /* Center the items vertically */
 }
 
+/* This class represents the logo element */
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2rem; /* Set the font size of the logo to 2rem */
+    font-weight: bold; /* Set the font weight of the logo to bold */
 }

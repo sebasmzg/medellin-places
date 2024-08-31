@@ -1,0 +1,14 @@
+/* CSS for the container element */
+.container {
+    min-width: 100px; /* Minimum width of the container */
+    padding: 10px; /* Padding around the container */
+    border-radius: 20px; /* Rounded corners for the container */
+    font-weight: 500; /* Font weight of the text inside the container */
+    text-align: center; /* Center alignment for the text inside the container */
+}
+
+/* CSS for the active state */
+.active {
+    background-color: var(--text1); /* Background color when the element is active */
+    color: var(--bg); /* Text color when the element is active */
+}
