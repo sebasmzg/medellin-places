@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.imgContainer}>
           <Image
             src={imgPathHero}
-            alt="duck walking"
+            alt="trekking image"
             fill
             className={styles.heroImg}
           />

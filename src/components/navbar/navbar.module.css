@@ -4,6 +4,8 @@
     display: flex; /* Use flexbox to arrange the items inside the container */
     justify-content: space-between; /* Space the items evenly along the horizontal axis */
     align-items: center; /* Center the items vertically */
+    z-index: 100;
+    opacity: 0.9;
 }
 
 /* This class represents the logo element */
