@@ -6,7 +6,7 @@
 .imgContainer{
     flex: 1;
     position: relative;
-    height: clac(100vh - 200px);
+    height: calc(100vh - 200px);
 }
 
 .img{
@@ -23,11 +23,6 @@
 .detail {
     display: flex;
     gap: 20px;
-}
-
-.avatar {
-    object-fit: cover;
-    border-radius: 50%;
 }
 
 .detailText{

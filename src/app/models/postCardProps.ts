@@ -3,7 +3,8 @@ export interface PostCardProps {
     imageSrc: string;
     title: string;
     description: string;
-    userId: string
+    userId: string;
+    slug: string;
 }
 
 export interface PostListProps {

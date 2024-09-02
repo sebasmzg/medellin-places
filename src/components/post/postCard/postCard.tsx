@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import styles from './postCard.module.css'
 import Link from 'next/link'
-import {PostCardProps} from '@/app/models/postCardProps'
+import { PostCardProps } from '@/app/models/postCardProps'
 
 
-const PostCard = ({id,imageSrc,title,description}:PostCardProps) => {
+
+const PostCard = ({imageSrc,title,slug}:PostCardProps) => {
     return (
         <div className={styles.card}>
             <div className={styles.imgContainer}>
@@ -12,7 +13,7 @@ const PostCard = ({id,imageSrc,title,description}:PostCardProps) => {
             </div>
             <div className={styles.content}>
                 <h1 className={styles.title}>{title}</h1>
-                <Link href={`/blog/${id}`} className={styles.link}>
+                <Link href={`/blog/${slug}`} className={styles.link}>
                     Read More
                 </Link>
             </div>

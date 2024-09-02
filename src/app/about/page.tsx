@@ -1,6 +1,12 @@
 import Image from "next/image";
 import styles from "./about.module.css";
+import { Metadata } from "next";
 const aboutImgPath = "/assets/img/pngwing.com.png";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "About us",
+};
 
 const AboutPage = () => {
   return (

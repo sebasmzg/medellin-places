@@ -1,7 +1,17 @@
-.container {
+.container{
+    display: flex;
+    gap: 20px;
+}
+
+.texts {
     flex-direction: column;
     display: flex;
     gap: 10px;
+}
+
+.avatar {
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .detailTitle {

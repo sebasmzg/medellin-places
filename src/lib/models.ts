@@ -7,12 +7,13 @@ interface IUser extends Document {
   isAdmin?: boolean;
 }
 
-interface IPost extends Document {
+export interface IPost extends Document {
   title: string;
   description: string;
   img?: string;
   userId: string;
   slug: string;
+  createdAt: Date;
 }
 
 const userSchema: Schema<IUser> = new Schema({
