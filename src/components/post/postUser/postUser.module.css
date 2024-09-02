@@ -1,0 +1,10 @@
+.container {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.detailTitle {
+    color: gray;
+    font-weight: bold;
+}

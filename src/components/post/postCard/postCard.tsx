@@ -4,7 +4,7 @@ import Link from 'next/link'
 import {PostCardProps} from '@/app/models/postCardProps'
 
 
-const PostCard = ({imageSrc,title,description,link}:PostCardProps) => {
+const PostCard = ({id,imageSrc,title,description}:PostCardProps) => {
     return (
         <div className={styles.card}>
             <div className={styles.imgContainer}>
@@ -12,8 +12,7 @@ const PostCard = ({imageSrc,title,description,link}:PostCardProps) => {
             </div>
             <div className={styles.content}>
                 <h1 className={styles.title}>{title}</h1>
-                <p className={styles.description}>{description}</p>
-                <Link href={link} className={styles.link}>
+                <Link href={`/blog/${id}`} className={styles.link}>
                     Read More
                 </Link>
             </div>

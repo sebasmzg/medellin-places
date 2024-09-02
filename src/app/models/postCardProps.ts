@@ -1,8 +1,9 @@
 export interface PostCardProps {
+    id: string;
     imageSrc: string;
     title: string;
     description: string;
-    link: string;
+    userId: string
 }
 
 export interface PostListProps {

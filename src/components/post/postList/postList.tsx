@@ -13,7 +13,8 @@ const PostList = ({posts }:PostListProps) => {
           imageSrc={post.imageSrc}
           title={post.title}
           description={post.description}
-          link={post.link}
+          id={post.id}
+          userId={post.userId}
         />
       ))}
     </div>
