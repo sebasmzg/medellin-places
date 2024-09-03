@@ -3,7 +3,9 @@
 import { revalidatePath } from "next/cache";
 import { Post } from "./models";
 import { connectToDB } from "./services";
+import { signIn, signOut } from "../../auth";
 
+//add a new post to db
 export const addPost = async (formData: FormData) => {
   const { title, description, img, userId, slug } =
     Object.fromEntries(formData);
@@ -28,6 +30,7 @@ export const addPost = async (formData: FormData) => {
   }
 };
 
+//delete a post from db
 export const deletePost = async (formData: FormData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -43,6 +46,7 @@ export const deletePost = async (formData: FormData) => {
   }
 };
 
+//update a post in db
 export const updatePost = async (formData: FormData) => {
     const { id, title, description, img, userId, slug } =
         Object.fromEntries(formData);
@@ -64,4 +68,15 @@ export const updatePost = async (formData: FormData) => {
         console.error(error);
         throw new Error("Failed to update post");
     }
+}
+
+//github login
+export const handleGithubLogin = async () => {
+  await signIn("github");
+}
+
+//github logout
+export const handleLogout = async () => {
+  await signOut();
+  console.log("Logged out");
 }

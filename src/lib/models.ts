@@ -5,6 +5,7 @@ interface IUser extends Document {
   email: string;
   img?: string;
   isAdmin?: boolean;
+  password?: string;
 }
 
 export interface IPost extends Document {
@@ -28,6 +29,9 @@ const userSchema: Schema<IUser> = new Schema({
     type: String,
     required: true,
     min: 6,
+  },
+  password:{
+    type:String,
   },
   img: {
     type: String,
@@ -61,5 +65,5 @@ const postSchema: Schema<IPost> = new Schema({
   },
 }, { timestamps: true });
 
-export const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>('User', userSchema);
-export const Post: Model<IPost> = mongoose.models.Post || mongoose.model<IPost>('Post', postSchema);
+export const User: Model<IUser> = mongoose.models?.User || mongoose.model<IUser>('User', userSchema);
+export const Post: Model<IPost> = mongoose.models?.Post || mongoose.model<IPost>('Post', postSchema);

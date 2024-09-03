@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "./links.module.css";
 import NavLink from "./navLink/navLink";
 import Image from "next/image";
+import { handleLogout } from "@/lib/actions";
 
 //links to be displayed in the navbar and their paths
 const links = [
@@ -16,11 +17,9 @@ const links = [
 //Links component
 
 //state to manage the mobile menu
-const Links = () => {
+const Links = ({session}: {session: any}) => {
   const [open, setOpen] = useState(false);
 
-  //temporary values
-  const session = true;
   const isAdmin = true;
 
   return (
@@ -31,10 +30,12 @@ const Links = () => {
           return <NavLink item={link} key={link.title} />;
         })}
         {/* Render admin link and logout button if user is logged in */}
-        {session ? (
+        {session?.user ? (
           <>
-            {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
-            <button className={styles.logout}>Logout</button>
+            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+            <form action={handleLogout}>
+              <button className={styles.logout}>Logout</button>
+            </form>
           </>
         ) : (
           // Render login link if user is not logged in
